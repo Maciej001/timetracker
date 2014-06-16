@@ -1,0 +1,16 @@
+Company 
+  - name
+User
+  - first name
+  - last name 
+  - company
+Project 
+	- name 
+	- company 
+	- default name
+Work 
+	- project
+	- user
+	- date performed
+	- number of hours
+	r

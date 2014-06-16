@@ -1,0 +1,3 @@
+.container
+	- flash.each do |key, value|
+		%h2.alert{class: "alert-#{key}"} #{value}

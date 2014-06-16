@@ -1,0 +1,29 @@
+%h1= @project.name
+<h2> Company: 
+= @project.company.name
+</h2
+
+<p>Default Rate: 
+= @project.default_rate
+</p>
+
+Slug: 
+= @project.slug
+
+%table
+	%tbody
+		%tr
+			%th View
+			%th User
+			%th Project
+			%th Date
+			%th Hours 
+		%tr
+
+		/ render partial for collection
+		/ - @project.works.each do |work|
+		
+		= render partial: "works/work", collection: @project.works
+
+- content_for :aside do
+	= render 'sidebar'

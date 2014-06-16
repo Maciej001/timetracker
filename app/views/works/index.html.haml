@@ -1,0 +1,18 @@
+%h1 List of Works
+%table
+	%tbody
+		%tr
+			%th View
+			%th User
+			%th Project
+			%th Date
+			%th Hours 
+		%tr
+		/ instead of iterating thru rows and displaying them one by one, 
+		/ rails allows to use render partial:
+
+		= render partial: "work", collection: @works
+			
+				
+- content_for :aside do
+	= render 'sidebar'

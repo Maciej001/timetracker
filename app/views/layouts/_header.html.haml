@@ -1,0 +1,7 @@
+%header
+	.container
+		= link_to 'Time Tracker', root_url, id: 'logo'
+		%nav
+			%ul
+				- nav_items.each do |item|
+					= display_nav_item(item[:displaytext], item[:controllername], item[:linkurl])

@@ -1,0 +1,7 @@
+<% 20.times do |n| %>
+  work_<%= n %>:
+    datetimeperformed: <%= Time.now - n.days %>
+    user: <%= n % 2 == 0 ? 'brianhook' : 'janedoe' %>
+    project: <%= n % 3 == 0 ? 'projectxyz' : 'secondproj' %>
+    hours: <%= n%8 + 1 %>
+<% end %>

@@ -1,3 +1,15 @@
+# == Schema Information
+#
+# Table name: users
+#
+#  id         :integer          not null, primary key
+#  fname      :string(255)
+#  lname      :string(255)
+#  company_id :integer
+#  created_at :datetime
+#  updated_at :datetime
+#
+
 class User < ActiveRecord::Base
 	belongs_to :company
 	has_many :works

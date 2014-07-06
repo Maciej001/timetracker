@@ -1,3 +1,16 @@
+# == Schema Information
+#
+# Table name: works
+#
+#  id                :integer          not null, primary key
+#  project_id        :integer
+#  user_id           :integer
+#  datetimeperformed :datetime
+#  created_at        :datetime
+#  updated_at        :datetime
+#  hours             :integer
+#
+
 class Work < ActiveRecord::Base
 	belongs_to :user
 	belongs_to :project

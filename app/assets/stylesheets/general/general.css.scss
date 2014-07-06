@@ -1,6 +1,11 @@
+$gray: 			#555;
+$green: 		#6BA669;
+
+
+
 body, h1, li , a{
 	font-family: Arial, sans-serif;
-	color: #555;
+	color: $gray;
 }
 
 body {
@@ -36,13 +41,37 @@ td {
 	padding: 10px 30px;
 }
 
+label {
+	display: block;	
+	margin-top: 20px;
+	width: 100%;
+	font-size: 1.2rem;
+}
+
+input, select {
+	padding: 7px 10px;
+	color: $gray;
+	font-size: 1rem;
+}
+
 .btn {
 	margin-top: 5px;
 	padding: 8px 15px;
 	color: white;
 	background: #65798A;
+	border: none;
+	font-size: 1rem;
 	&:hover {
 		color: #ddd;
+	}
+}
+
+.btn-green {
+	background: $green;
+	&:hover {
+		color: white;
+		background: darken($green, 5%);
+		cursor: pointer;
 	}
 }
 
@@ -63,6 +92,10 @@ td {
 	h1 {
 		margin-top: 0;
 	}
+}
+
+.alert-notice {
+	color: $green;
 }
 
 aside {

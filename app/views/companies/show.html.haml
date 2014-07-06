@@ -1,20 +1,14 @@
 %h1= @company.name
 
-%table
-	%tbody
-		%tr
-			%th Project
-			%th Company
-
-		/ - @company.projects.each do |project|
-		/	%tr
-		/		%td= link_to project, project
-		/		%td= link_to project.company.name, project.company
-		/
-		/ instead:
-		/
-
-		= render partial: "projects/project", collection: @company.projects
-
+- if @company.projects.any?
+	%table
+		%tbody
+			%tr
+				%th Project
+				%th Company
+			= render partial: "projects/project", collection: @company.projects
+- else
+	%h2 No projects
+			
 - content_for :aside do
 	= render 'sidebar'

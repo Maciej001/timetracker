@@ -12,4 +12,8 @@ class ProjectsController < ApplicationController
 		end
 	end
 
+	def new 
+		@project = Project.new
+	end
+
 end
